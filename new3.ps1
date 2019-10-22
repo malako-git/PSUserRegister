@@ -50,7 +50,7 @@ if ($inputallowed_choice.Contains($input_choice)){
     #write-host "in first if"
     if ($input_choice -eq 1) {
         #write-host "in choice 1"
-        New-Item d:\${usercounter}User.txt -ItemType file
+        New-Item d:\PSUserRegister_Login\${usercounter}User.txt -ItemType file
         
         while ($checker -eq "FALSE") {    
             $input_username=read-host "Username: "
@@ -59,7 +59,7 @@ if ($inputallowed_choice.Contains($input_choice)){
 
             if ($doink -eq "TRUE") {
                 write-host "Username accepted"
-                add-content d:\${usercounter}user.txt "$input_username"
+                add-content d:\PSUserRegister_Login\${usercounter}user.txt "$input_username"
                 $checker = "TRUE"    
             }
 
